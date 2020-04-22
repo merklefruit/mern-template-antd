@@ -13,7 +13,7 @@
   - Express
   - Helmet
   - Morgan
-- Frontend: (based on create-react-app)
+- Frontend: (based on [create-react-app](https://github.com/facebook/create-react-app) by Facebook 🤙)
   - CRA Rewired
   - Ant Design
 
