@@ -7,13 +7,13 @@
 
 ## Dependencies
 
-- Backend:
+- Backend: (based on create-express-api by [w3CJ](https://github.com/w3cj) 🙏🏻)
   - Cors
   - Dotenv
   - Express
   - Helmet
   - Morgan
-- Frontend:
+- Frontend: (based on create-react-app)
   - CRA Rewired
   - Ant Design
 
@@ -30,7 +30,7 @@ cd client && npm install && cd ../server && npm install && cd .. && npm install
 ```
 
 Then, connect your mongoDB database:
-inside the `server` folder, create a file called `.env` and add the DATABASE_URL string.
+inside the `server` folder, create a file called `.env` and add the mongo connectionstring.
 
 ```bash
 # Example (./server/.env)
@@ -38,8 +38,9 @@ NODE_ENV=development
 DATABASE_URL=my_mongo_connection_string
 ```
 
-```bash
+A `.env.sample` file is provided in the server folder so you always know what are the required environment variables.
 
+```bash
 # Run client & server concurrently
 npm run dev
 
