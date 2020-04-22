@@ -7,7 +7,7 @@
 
 ## Dependencies
 
-- Backend: (based on create-express-api by [w3CJ](https://github.com/w3cj) 🙏🏻)
+- Backend: (based on [create-express-api](https://www.npmjs.com/package/create-express-api) by [w3CJ](https://github.com/w3cj) 🙏🏻)
   - Cors
   - Dotenv
   - Express
