@@ -1,6 +1,6 @@
 # MERN Stack custom starter template
 
-_I use this repository as a starter template for my own projects._
+**I use this repository as a starter template for my own projects.**
 
 ## Usage
 
