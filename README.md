@@ -1,6 +1,6 @@
 # MERN Stack custom template
 
-[](https://img.shields.io/badge/Stack-MERN-informational)
+![](https://img.shields.io/badge/Stack-MERN-informational)
 
 <img src="./design/mern.jpeg"></img>
 
