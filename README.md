@@ -1,11 +1,22 @@
 # MERN Stack custom template
 
+![](https://img.shields.io/badge/Stack-MERN-informational)
+
 <img src="./design/mern.jpeg"></img>
 
-**I use this repository as a starter template for my own projects.**
-**Feel free to use it on your own.**
+**I haven't found any good full-stack web app starter boilerplates using [Ant Design](https://ant.design), so I decided to make my own.**
+**Feel free to use it on your projects.**
 
 ## Features
+
+- [ ] Homepage / Landing Page
+- [ ] Authentication with JWT
+- [ ] Sleek and modern design with the Ant Design library
+- [ ] Protected Routes:
+      _ [ ] Dashboard
+      _ [ ] Profile
+
+## Dependencies
 
 - Backend: (based on [create-express-api](https://www.npmjs.com/package/create-express-api) by [w3CJ](https://github.com/w3cj) 🙏🏻)
   - Cors
@@ -13,6 +24,7 @@
   - Express
   - Helmet
   - Morgan
+  - Monk
 - Frontend: (based on [create-react-app](https://github.com/facebook/create-react-app) by Facebook 🤙)
   - CRA Rewired, Less, babel-plugins (necessary for Antd)
   - Ant Design with custom config
