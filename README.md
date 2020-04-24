@@ -5,6 +5,7 @@
 <img src="./design/mern.jpeg"></img>
 
 **I haven't found any good full-stack web app starter boilerplates using [Ant Design](https://ant.design), so I decided to make my own.**
+
 **Feel free to use it on your projects.**
 
 ## Features
@@ -15,19 +16,6 @@
 - [ ] Protected Routes:
   - [ ] Dashboard
   - [ ] Profile
-
-## Dependencies
-
-- Backend: (based on [create-express-api](https://www.npmjs.com/package/create-express-api) by [w3CJ](https://github.com/w3cj) 🙏🏻)
-  - Cors
-  - Dotenv
-  - Express
-  - Helmet
-  - Morgan
-  - Monk
-- Frontend: (based on [create-react-app](https://github.com/facebook/create-react-app) by Facebook 🤙)
-  - CRA Rewired, Less, babel-plugins (necessary for Antd)
-  - Ant Design with custom config
 
 ## Usage
 
