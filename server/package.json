@@ -1,5 +1,5 @@
 {
-  "name": "express-api-starter",
+  "name": "express-api",
   "version": "1.2.0",
   "description": " A basic starter for an express.js API",
   "main": "index.js",
@@ -10,17 +10,18 @@
     "test": "mocha --exit"
   },
   "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
-  },
+  "author": "Nicolas Racchi",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
     "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.10",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

@@ -5,24 +5,19 @@ const cors = require("cors");
 
 require("dotenv").config();
 
-const middlewares = require("./middlewares");
-const api = require("./api");
-const auth = require("./auth");
+// Helpers
+const jwt = require("./helpers/jwt");
+const middlewares = require("./helpers/error-handler");
 
 const app = express();
 
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(cors());
+app.use(jwt());
 
-app.get("/", (req, res) => {
-  res.json({
-    message: "✨👋🌎🌍🌏✨"
-  });
-});
-
-app.use("/api", api);
-app.use("/auth", auth);
+// API routes:
+app.use("/users", require("./users/user.controller"));
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
