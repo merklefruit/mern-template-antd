@@ -7,7 +7,8 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  .catch(() => console.error("Error connecting to the database"));
+  .then(() => console.log("Connected to MongoDB"))
+  .catch(() => console.error("Error connecting to MongoDB"));
 
 mongoose.Promise = global.Promise;
 

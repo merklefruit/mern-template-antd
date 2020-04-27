@@ -8,7 +8,7 @@
   position: absolute;
   text-align: center;
   border-radius: 15px;
-  width: 700px;
+  width: 450px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -16,15 +16,27 @@
   transform: translate3d(-50%, -50%, 0);
 }
 
-.wallpaper {
-  background-image: url("../img/wallpaper.jpg");
+.wallpaper-login {
+  background-image: url("../img/wallpaper-login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wallpaper-register {
+  background-image: url("../img/wallpaper-register.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .form-container {
-  padding-left: 4em;
-  padding-right: 4em;
   margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .login-card {
+    width: 100%;
+    border-radius: 0px;
+  }
 }

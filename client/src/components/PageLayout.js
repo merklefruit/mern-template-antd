@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import SideMenu from "./SideMenu";
+import CustomAlert from "../components/CustomAlert";
 
 import "../css/main.css";
 import "../css/layout.css";
@@ -20,6 +21,7 @@ function PageLayout({ children }) {
         <Header className="site-layout-sub-header-background header-div">
           <div className="logo-div lead">{Logo}</div>
         </Header>
+        <CustomAlert />
         <Content className="content-div">
           <div className="site-layout-background">{children}</div>
         </Content>

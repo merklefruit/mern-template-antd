@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Card, Form, Input, Button, Typography } from "antd";
+import CustomAlert from "../components/CustomAlert";
 
 import "../css/main.css";
 import "../css/auth.css";
@@ -17,11 +18,12 @@ function Login() {
 
   return (
     <Fragment>
-      <div className="login-parent wallpaper">
+      <div className="login-parent wallpaper-login">
         <Card className="center-card login-card">
           <div className="form-container">
             <Title level={2}>Login</Title>
             <Form
+              layout="vertical"
               name="login"
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
@@ -47,12 +49,13 @@ function Login() {
               </Form.Item>
 
               <Form.Item className="center mt-6">
-                <Button type="primary" size="large" htmlType="submit">
+                <Button type="primary" size="large" htmlType="submit" block>
                   Login
                 </Button>
               </Form.Item>
             </Form>
           </div>
+          <CustomAlert />
         </Card>
       </div>
     </Fragment>

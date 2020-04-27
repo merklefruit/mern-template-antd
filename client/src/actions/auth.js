@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setAlert } from "./alert";
 import { USERS_URL } from "../helpers/config";
 import { REGISTER_SUCCESS, REGISTER_FAIL } from "./types";
 
@@ -21,9 +22,6 @@ export const register = ({ username, email, password }) => async dispatch => {
       payload: res.data
     });
   } catch (error) {
-    // °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-    const error = res.message;
-    console.log(error); // CAMBIARE CON ALERT ACTION!!!!!!!!!!!!!!!
     dispatch({
       type: REGISTER_FAIL
     });
