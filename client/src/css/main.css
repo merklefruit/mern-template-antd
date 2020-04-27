@@ -9,3 +9,16 @@
 .lead-2 {
   font-size: 1.3em;
 }
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+.mt-6 {
+  margin-top: 25px;
+}
+
+.center-card {
+  max-width: 850px;
+  margin: auto;
+}

@@ -4,12 +4,13 @@ import SideMenu from "./SideMenu";
 
 import "../css/main.css";
 import "../css/layout.css";
+import { LOGO, AUTHOR } from "../helpers/config";
 
 const { Header, Content, Footer } = Layout;
 
 // Easy customizable variables:
-const Author = "Nicolas Racchi";
-const Logo = "Logo";
+const Author = AUTHOR;
+const Logo = LOGO;
 
 function PageLayout({ children }) {
   return (

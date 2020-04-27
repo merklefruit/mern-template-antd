@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import store from "./helpers/store";
 
 // AUTH ROUTES
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 // MAIN ROUTES
 import Home from "./pages/Home";
@@ -18,11 +20,11 @@ function App() {
         <Fragment>
           <Route exact path="/" component={Home} />
           <Switch>
-            {/* <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} /> */}
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
           </Switch>
 
-          <Route component={PageNotFound} />
+          {/* <Route component={PageNotFound} /> */}
         </Fragment>
       </Router>
     </Provider>
