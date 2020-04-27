@@ -37,6 +37,9 @@ async function create(userParam) {
   if (await User.findOne({ username: userParam.username })) {
     throw 'Username "' + userParam.username + '" is already taken';
   }
+  if (await User.findOne({ email: userParam.email })) {
+    throw "An account with this email address already exists";
+  }
 
   const user = new User(userParam);
 
