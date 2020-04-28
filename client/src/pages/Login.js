@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { Card, Form, Input, Button, Typography } from "antd";
 import CustomAlert from "../components/CustomAlert";
 
 import "../css/main.css";
 import "../css/auth.css";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 function Login() {
   const onFinish = values => {
@@ -48,7 +49,16 @@ function Login() {
                 <Input.Password />
               </Form.Item>
 
-              <Form.Item className="center mt-6">
+              <div className="already-div">
+                <Text>
+                  Don't have an account?{" "}
+                  <span className="bold">
+                    <Link to="/register">Register</Link>
+                  </span>
+                </Text>
+              </div>
+
+              <Form.Item className="center">
                 <Button type="primary" size="large" htmlType="submit" block>
                   Login
                 </Button>

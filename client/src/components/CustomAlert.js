@@ -17,7 +17,7 @@ const CustomAlert = ({ alerts }) =>
     />
   ));
 
-Alert.propTypes = {
+CustomAlert.propTypes = {
   alerts: PropTypes.array.isRequired
 };
 

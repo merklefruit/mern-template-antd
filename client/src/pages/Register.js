@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAlert } from "../actions/alert";
+import { register } from "../actions/auth";
 import PropTypes from "prop-types";
 import { Card, Form, Input, Button, Typography } from "antd";
 import CustomAlert from "../components/CustomAlert";
@@ -8,13 +10,15 @@ import CustomAlert from "../components/CustomAlert";
 import "../css/main.css";
 import "../css/auth.css";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
-function Register({ setAlert }) {
-  const onFinish = async values => {
-    const { username, email, password1, password2 } = values;
-    if (password1 !== password2) {
-      setAlert("Passowrds don't match", "", "error", 2500);
+function Register({ setAlert, register }) {
+  const onFinish = values => {
+    const { username, email, password, password2 } = values;
+    if (password !== password2) {
+      setAlert("Passowrds do not match", "", "error", 2500);
+    } else {
+      register({ username, email, password });
     }
   };
 
@@ -60,7 +64,7 @@ function Register({ setAlert }) {
 
               <Form.Item
                 label="Password"
-                name="password1"
+                name="password"
                 rules={[
                   { required: true, message: "Please input your password" }
                 ]}
@@ -81,7 +85,16 @@ function Register({ setAlert }) {
                 <Input.Password />
               </Form.Item>
 
-              <Form.Item className="center mt-6">
+              <div className="already-div">
+                <Text>
+                  Already have an account?{" "}
+                  <span className="bold">
+                    <Link to="/login">Login</Link>
+                  </span>
+                </Text>
+              </div>
+
+              <Form.Item className="center">
                 <Button type="primary" size="large" htmlType="submit" block>
                   Register
                 </Button>
@@ -96,7 +109,8 @@ function Register({ setAlert }) {
 }
 
 Register.propTypes = {
-  setAlert: PropTypes.func.isRequired
+  setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired
 };
 
-export default connect(null, { setAlert })(Register);
+export default connect(null, { setAlert, register })(Register);

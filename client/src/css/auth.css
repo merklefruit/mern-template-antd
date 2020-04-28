@@ -2,6 +2,17 @@
   height: 100vh;
   width: 100vw;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wallpaper-login {
+  background-image: url("../img/wallpaper-login.jpg");
+}
+
+.wallpaper-register {
+  background-image: url("../img/wallpaper-register.jpg");
 }
 
 .login-card {
@@ -16,27 +27,18 @@
   transform: translate3d(-50%, -50%, 0);
 }
 
-.wallpaper-login {
-  background-image: url("../img/wallpaper-login.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.wallpaper-register {
-  background-image: url("../img/wallpaper-register.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .form-container {
   margin: auto;
 }
 
 @media only screen and (max-width: 500px) {
   .login-card {
+    display: block;
     width: 100%;
     border-radius: 0px;
   }
+}
+
+.already-div {
+  margin-bottom: 18px;
 }

@@ -4,7 +4,7 @@
 
 // Base API Route
 // Only change this API_URL variable here, other ones are dynamic:
-export const API_URL = "http://localhost:5000/";
+export const API_URL = "http://localhost:5000";
 
 // Author of the project
 // (Appears in the Footer)
