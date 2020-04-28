@@ -36,6 +36,10 @@ body {
   display: none;
 }
 
+.white-link .white-link:active {
+  color: white;
+}
+
 @media only screen and (max-width: 500px) {
   .mobile-only {
     display: block;

@@ -13,10 +13,14 @@
 
 .ant-menu-item {
   font-size: 1.2em;
+  font-weight: 300;
 }
 
 .logo-item {
   padding-left: 0;
+  font-size: 1.25em;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .logo {
@@ -28,6 +32,13 @@
   position: absolute;
   font-size: 1.1em;
   cursor: pointer;
+}
+
+.tail-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* SIDER */
