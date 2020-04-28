@@ -4,9 +4,9 @@ import CustomAlert from "./CustomAlert";
 import CustomSider from "./CustomSider";
 import CustomMenu from "./CustomMenu";
 
-import "../static/css/main.css";
-import "../static/css/layout.css";
-import { LOGO, AUTHOR } from "../helpers/config";
+import "../../static/css/main.css";
+import "../../static/css/layout.css";
+import { LOGO, AUTHOR } from "../../helpers/config";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 const { Header, Content, Footer } = Layout;

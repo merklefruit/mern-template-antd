@@ -3,14 +3,11 @@ import { Menu, Layout } from "antd";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { logout } from "../actions/auth";
+import { logout } from "../../actions/auth";
 
-import "../static/css/main.css";
-import "../static/css/layout.css";
+import "../../static/css/main.css";
+import "../../static/css/layout.css";
 import { DashboardOutlined, ProfileOutlined } from "@ant-design/icons";
-
-import "../static/css/main.css";
-import "../static/css/layout.css";
 
 const { SubMenu } = Menu;
 const { Sider } = Layout;
