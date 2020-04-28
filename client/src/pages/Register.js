@@ -7,8 +7,8 @@ import PropTypes from "prop-types";
 import { Card, Form, Input, Button, Typography } from "antd";
 import CustomAlert from "../components/CustomAlert";
 
-import "../css/main.css";
-import "../css/auth.css";
+import "../static/css/main.css";
+import "../static/css/auth.css";
 
 const { Title, Text } = Typography;
 

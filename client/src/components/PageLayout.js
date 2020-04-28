@@ -3,8 +3,8 @@ import { Layout } from "antd";
 import SideMenu from "./SideMenu";
 import CustomAlert from "../components/CustomAlert";
 
-import "../css/main.css";
-import "../css/layout.css";
+import "../static/css/main.css";
+import "../static/css/layout.css";
 import { LOGO, AUTHOR } from "../helpers/config";
 
 const { Header, Content, Footer } = Layout;

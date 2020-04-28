@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { Card, Form, Input, Button, Typography } from "antd";
 import CustomAlert from "../components/CustomAlert";
 
-import "../css/main.css";
-import "../css/auth.css";
+import "../static/css/main.css";
+import "../static/css/auth.css";
 
 const { Title, Text } = Typography;
 
 function Login() {
-  const onFinish = values => {
-    console.log("Success:", values);
-  };
+  const onFinish = values => {};
 
   const onFinishFailed = errorInfo => {
     console.log("Failed:", errorInfo);
@@ -30,10 +28,14 @@ function Login() {
               onFinishFailed={onFinishFailed}
             >
               <Form.Item
-                label="Username"
-                name="username"
+                label="Email"
+                name="email"
                 rules={[
-                  { required: true, message: "Please input your username!" }
+                  {
+                    type: "email",
+                    required: true,
+                    message: "Please input a valid email address"
+                  }
                 ]}
               >
                 <Input />
@@ -43,7 +45,7 @@ function Login() {
                 label="Password"
                 name="password"
                 rules={[
-                  { required: true, message: "Please input your password!" }
+                  { required: true, message: "Please input your password" }
                 ]}
               >
                 <Input.Password />
