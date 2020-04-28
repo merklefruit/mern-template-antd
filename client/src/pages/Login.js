@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { login } from "../actions/auth";
 import { Card, Form, Input, Button, Typography } from "antd";
 import CustomAlert from "../components/CustomAlert";
 
@@ -8,12 +11,19 @@ import "../static/css/auth.css";
 
 const { Title, Text } = Typography;
 
-function Login() {
-  const onFinish = values => {};
+function Login({ login, isAuthenticated }) {
+  const onFinish = values => {
+    const { email, password } = values;
+    login(email, password);
+  };
 
   const onFinishFailed = errorInfo => {
     console.log("Failed:", errorInfo);
   };
+
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
 
   return (
     <Fragment>
@@ -74,4 +84,13 @@ function Login() {
   );
 }
 
-export default Login;
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { login })(Login);

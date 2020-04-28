@@ -32,10 +32,23 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .login-parent {
+    height: auto;
+  }
   .login-card {
     display: block;
+    height: 100%;
     width: 100%;
     border-radius: 0px;
+  }
+  .wallpaper-login {
+    background: unset;
+  }
+  .wallpaper-register {
+    background: unset;
+  }
+  .form-container {
+    margin-top: 60px;
   }
 }
 

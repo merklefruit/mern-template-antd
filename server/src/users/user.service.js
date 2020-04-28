@@ -12,8 +12,8 @@ module.exports = {
   delete: _delete
 };
 
-async function authenticate({ username, password }) {
-  const user = await User.findOne({ username });
+async function authenticate({ email, password }) {
+  const user = await User.findOne({ email });
   if (user && bcrypt.compareSync(password, user.hash)) {
     const { hash, ...userWithoutHash } = user.toObject();
     const token = jwt.sign({ sub: user.id }, process.env.JWT_SECRET);

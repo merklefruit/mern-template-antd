@@ -1,3 +1,8 @@
+body {
+  z-index: 0;
+  background-color: #f0f2f5;
+}
+
 .center {
   text-align: center;
 }
@@ -25,4 +30,15 @@
 
 .bold {
   font-weight: 500;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .mobile-only {
+    display: block;
+    transition: display 2s;
+  }
 }

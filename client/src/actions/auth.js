@@ -8,7 +8,8 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAIL
+  LOGIN_FAIL,
+  LOGOUT
 } from "./types";
 
 // Load User
@@ -48,6 +49,7 @@ export const register = ({ username, email, password }) => async dispatch => {
       type: REGISTER_SUCCESS,
       payload: res.data
     });
+    dispatch(loadUser());
   } catch (err) {
     const error = err.response.data.message;
     dispatch(setAlert(error, "", "error"));
@@ -74,6 +76,7 @@ export const login = (email, password) => async dispatch => {
       type: LOGIN_SUCCESS,
       payload: res.data
     });
+    dispatch(loadUser());
   } catch (err) {
     const error = err.response.data.message;
     dispatch(setAlert(error, "", "error"));
@@ -81,4 +84,11 @@ export const login = (email, password) => async dispatch => {
       type: LOGIN_FAIL
     });
   }
+};
+
+// Logout User
+export const logout = () => dispatch => {
+  dispatch({
+    type: LOGOUT
+  });
 };

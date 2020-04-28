@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAlert } from "../actions/alert";
 import { register } from "../actions/auth";
@@ -12,7 +12,7 @@ import "../static/css/auth.css";
 
 const { Title, Text } = Typography;
 
-function Register({ setAlert, register }) {
+function Register({ setAlert, register, isAuthenticated }) {
   const onFinish = values => {
     const { username, email, password, password2 } = values;
     if (password !== password2) {
@@ -25,6 +25,10 @@ function Register({ setAlert, register }) {
   const onFinishFailed = errorInfo => {
     console.log("Failed:", errorInfo);
   };
+
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
 
   return (
     <Fragment>
@@ -110,7 +114,12 @@ function Register({ setAlert, register }) {
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  register: PropTypes.func.isRequired
+  register: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 };
 
-export default connect(null, { setAlert, register })(Register);
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { setAlert, register })(Register);

@@ -1,31 +1,84 @@
-#components-layout-demo-responsive .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
+.center-header {
+  display: block;
+  justify-content: space-between;
 }
 
-.site-layout-sub-header-background {
-  background: #fff;
+.container {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.site-layout-background {
-  background: #fff;
-  padding: 24px;
-  min-height: 360px;
+/* HEADER */
+
+.ant-menu-item {
+  font-size: 1.2em;
+}
+
+.logo-item {
+  padding-left: 0;
+}
+
+.logo {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.mobile-menu-icon {
+  position: absolute;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+/* SIDER */
+.sider {
+  position: fixed;
+  top: 64px;
+}
+.mobile-menu {
+  width: 276px;
+}
+
+/* CONTENT */
+
+.alert-container {
+  max-width: 600px;
+  margin: auto;
+  padding-top: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 6px;
 }
 
 .content-div {
-  margin: 24px 16px 0;
+  min-height: 430px;
 }
 
-.ant-layout {
-  min-height: 100vh;
+/* FOOTER */
+.footer {
+  margin-top: 30px;
 }
 
-.ant-layout-header {
-  text-align: center;
-}
+@media only screen and (max-width: 500px) {
+  .center-header {
+    color: whitesmoke;
+  }
 
-.header-div {
-  padding: 0;
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menu {
+    display: none;
+  }
+  .center-header {
+    display: block;
+    text-align: center;
+  }
+  .logo-mobile {
+    display: block;
+    color: whitesmoke;
+    font-size: 1.3em;
+  }
 }
