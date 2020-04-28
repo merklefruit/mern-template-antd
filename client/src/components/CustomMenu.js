@@ -19,7 +19,7 @@ const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
       <SubMenu
         title={
           <>
-            <Link to="/dashboard">
+            <Link to="/dashboard" style={{ color: "white" }}>
               <DashboardOutlined /> Dashboard
             </Link>
           </>
@@ -32,7 +32,7 @@ const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
       <SubMenu
         title={
           <>
-            <Link to="/profile">
+            <Link to="/profile" style={{ color: "white" }}>
               <ProfileOutlined /> Profile
             </Link>
           </>
@@ -42,11 +42,15 @@ const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Menu.Item>Item 2</Menu.Item>
         <Menu.Item>Item 3</Menu.Item>
       </SubMenu>
-      <Menu.Item>
-        <a onClick={logout}>
-          <Button type="primary">Logout</Button>
-        </a>
-      </Menu.Item>
+      <div className="tail-menu">
+        <span
+          type="primary"
+          onClick={() => logout()}
+          style={{ color: "white", cursor: "pointer" }}
+        >
+          Logout
+        </span>
+      </div>
     </Menu>
   );
 
@@ -65,24 +69,15 @@ const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
           About us
         </Link>
       </Menu.Item>
-      <Menu.Item>
-        <Link to="/" style={{ color: "white" }}>
-          Careers
-        </Link>
-      </Menu.Item>
 
-      <div className="tail-menu">
-        <Menu.Item>
-          <Link to="/login" style={{ color: "white" }}>
-            Login
-          </Link>
-        </Menu.Item>
-        <Menu.Item style={{ marginLeft: 10 }}>
-          <Link to="/register">
-            <Button type="primary">Sign up!</Button>
-          </Link>
-        </Menu.Item>
-      </div>
+      <span className="tail-menu">
+        <Link to="/login" style={{ color: "white" }}>
+          Login
+        </Link>
+        <Link to="/register" style={{ marginLeft: 10 }}>
+          <Button type="primary">Sign up!</Button>
+        </Link>
+      </span>
     </Menu>
   );
 

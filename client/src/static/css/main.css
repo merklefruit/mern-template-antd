@@ -40,7 +40,7 @@ body {
   color: white;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
   .mobile-only {
     display: block;
     transition: display 2s;
