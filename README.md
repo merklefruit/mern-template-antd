@@ -63,4 +63,4 @@ _This template exists only thanks to the frameworks and library that I used to b
 
 ## License
 
-**MIT**
+**[MIT](./LICENSE)**
