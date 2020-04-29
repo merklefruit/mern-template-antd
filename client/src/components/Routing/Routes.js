@@ -1,13 +1,16 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
+//  @ ROUTES:
+//  @ Here are all the routes that require authentication
+
 // MAIN ROUTES
-import Dashboard from "../Dashboard/Dashboard";
+import Dashboard from "../UserArea/Dashboard/Dashboard";
 
 // EXTRA
 import PrivateRoute from "../Routing/PrivateRoute";
-import PageLayout from "../Layout/PageLayout";
-import NotFound from "../Layout/NotFound";
+import PageLayout from "../UserArea/Layout/PageLayout";
+import NotFound from "../UserArea/Layout/NotFound";
 
 const Routes = () => {
   return (

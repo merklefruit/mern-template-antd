@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
 import { Card, Form, Input, Button, Typography } from "antd";
-import CustomAlert from "../Layout/CustomAlert";
+import CustomAlert from "../UserArea/Layout/CustomAlert";
 
 import "../../static/css/main.css";
 import "../../static/css/auth.css";

@@ -1,8 +1,9 @@
-# MERN Stack custom template
+# MERN + Ant Design custom template
 
 ![](https://img.shields.io/badge/Stack-MERN-informational)
 
 <img src="./design/mern.jpeg"></img>
+<img src="./design/antdesign.png"></img>
 
 **I haven't found any good full-stack web app starter boilerplates using [Ant Design](https://ant.design), so I decided to make my own.**
 
@@ -11,15 +12,19 @@
 ## Features
 
 - [x] Landing Page
+- [x] Ant-Motion animations
 - [x] Sleek and modern design with the Ant Design library
+- [x] Redux for State Management
+- [x] Login/Register flow with JWT Authentication
 - [x] Protected Routes:
 
   - [x] Dashboard
   - [ ] Profile
 
-- [x] REST API Backend
+- [x] REST API Backend with Node.JS
+- [x] MongoDB
 - [x] Authentication with JWT
-- [x] MongoDB Connection
+- [x] Easy configuration
 
 ## Usage
 
@@ -51,3 +56,11 @@ npm run dev
 ## Other useful things
 
 - **Locales**: Ant design supports language locales. As default, this template uses en_US (english). To change this setting to your own language, open `client/index.js` and change en_US to your own language based on locale tags (find some of them [here](https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html#util-text))
+
+## Credits
+
+_This template exists only thanks to the frameworks and library that I used to build it. I've just put the pieces together to make it easier to start a web app with this stack._
+
+## License
+
+**MIT**

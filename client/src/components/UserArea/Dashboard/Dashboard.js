@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Card, Typography } from "antd";
 
-import "../../static/css/main.css";
+import "../../../static/css/main.css";
 
 const { Title } = Typography;
 
@@ -12,7 +12,7 @@ const Dashboard = ({ user: { username } }) => {
     <Fragment>
       <section id="welcome-user">
         <Card className="center">
-          <Title level={2}>Welcome back, {username}</Title>
+          <Title level={3}>Welcome back, {username}</Title>
         </Card>
       </section>
       <section id="dashboard table"></section>

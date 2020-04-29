@@ -8,7 +8,7 @@ const CustomAlert = ({ alerts }) =>
   alerts.length > 0 &&
   alerts.map(alert => (
     <Alert
-      style={{ marginBottom: 10 }}
+      style={{ marginTop: 3, marginBottom: 3 }}
       key={alert.id}
       message={alert.msg}
       description={alert.desc}

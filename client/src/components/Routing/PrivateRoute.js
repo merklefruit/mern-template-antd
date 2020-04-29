@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
-import Loading from "../Layout/Loading";
+import Loading from "../UserArea/Layout/Loading";
 
 const PrivateRoute = ({ component: Component, auth, ...rest }) => (
   <Route

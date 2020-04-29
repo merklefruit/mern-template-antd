@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { Menu, Button } from "antd";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { logout } from "../../actions/auth";
+import { logout } from "../../../actions/auth";
 
-import { LOGO } from "../../helpers/config";
+import { LOGO } from "../../../helpers/config";
 import { DashboardOutlined, ProfileOutlined } from "@ant-design/icons";
-import "../../static/css/main.css";
-import "../../static/css/layout.css";
+import "../../../static/css/main.css";
+import "../../../static/css/layout.css";
 
 const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (

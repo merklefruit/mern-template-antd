@@ -1,7 +1,7 @@
 import React from "react";
 import { Spin } from "antd";
 
-import "../../static/css/layout.css";
+import "../../../static/css/layout.css";
 
 const Loading = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import { AUTHOR } from "../../../helpers/config";
 export const Nav00DataSource = {
   wrapper: { className: "header0 home-page-wrapper" },
   page: { className: "home-page" },
@@ -14,7 +15,7 @@ export const Nav00DataSource = {
         className: "header0-item",
         children: {
           href: "#",
-          children: [{ children: "Product", name: "text" }]
+          children: [{ children: "Products", name: "text" }]
         },
         subItem: [
           {
@@ -25,6 +26,7 @@ export const Nav00DataSource = {
               children: [
                 {
                   name: "image0",
+                  href: "/product",
                   className: "item-image",
                   children:
                     "https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg"
@@ -106,7 +108,7 @@ export const Banner00DataSource = {
   },
   content: {
     className: "banner0-content",
-    children: "一个高效的页面动画解决方案"
+    children: "MERN x ANTD Web App Template"
   },
   button: { className: "banner0-button", children: "Learn More" }
 };
@@ -374,8 +376,7 @@ export const Footer00DataSource = {
     className: "copyright",
     children: (
       <span>
-        ©2018 <a href="https://motion.ant.design">Ant Motion</a> All Rights
-        Reserved
+        ©2020 - <a href="/about">{AUTHOR}</a>
       </span>
     )
   }
