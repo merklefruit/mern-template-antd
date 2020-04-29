@@ -3,22 +3,20 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
-import { Card, Form, Input, Button, Typography } from "antd";
+import { Card, Form, Input, Button, Typography, Breadcrumb } from "antd";
 import CustomAlert from "../UserArea/Layout/CustomAlert";
 
 import "../../static/css/main.css";
 import "../../static/css/auth.css";
+import { HomeOutlined } from "@ant-design/icons";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
+const { Item } = Breadcrumb;
 
 function Login({ login, isAuthenticated }) {
   const onFinish = values => {
     const { email, password } = values;
     login(email, password);
-  };
-
-  const onFinishFailed = errorInfo => {
-    console.log("Failed:", errorInfo);
   };
 
   if (isAuthenticated) {
@@ -29,14 +27,18 @@ function Login({ login, isAuthenticated }) {
     <Fragment>
       <div className="login-parent wallpaper-login">
         <Card className="center-card login-card">
+          <Breadcrumb>
+            <Item>
+              <Link to="/">
+                <HomeOutlined /> Home
+              </Link>
+            </Item>
+            <Item>
+              <Link to="/login">Login</Link>
+            </Item>
+          </Breadcrumb>
           <div className="form-container">
-            <Title level={2}>Login</Title>
-            <Form
-              layout="vertical"
-              name="login"
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-            >
+            <Form layout="vertical" name="login" onFinish={onFinish}>
               <Form.Item
                 label="Email"
                 name="email"

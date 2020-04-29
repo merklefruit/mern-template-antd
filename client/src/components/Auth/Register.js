@@ -4,13 +4,15 @@ import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
-import { Card, Form, Input, Button, Typography } from "antd";
+import { Card, Form, Input, Button, Typography, Breadcrumb } from "antd";
 import CustomAlert from "../UserArea/Layout/CustomAlert";
 
 import "../../static/css/main.css";
 import "../../static/css/auth.css";
+import { HomeOutlined } from "@ant-design/icons";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
+const { Item } = Breadcrumb;
 
 function Register({ setAlert, register, isAuthenticated }) {
   const onFinish = values => {
@@ -22,10 +24,6 @@ function Register({ setAlert, register, isAuthenticated }) {
     }
   };
 
-  const onFinishFailed = errorInfo => {
-    console.log("Failed:", errorInfo);
-  };
-
   if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
   }
@@ -34,14 +32,18 @@ function Register({ setAlert, register, isAuthenticated }) {
     <Fragment>
       <div className="login-parent wallpaper-register">
         <Card className="center-card login-card">
+          <Breadcrumb>
+            <Item>
+              <Link to="/">
+                <HomeOutlined /> Home
+              </Link>
+            </Item>
+            <Item>
+              <Link to="/register">Register</Link>
+            </Item>
+          </Breadcrumb>
           <div className="form-container">
-            <Title level={2}>Register</Title>
-            <Form
-              layout="vertical"
-              name="login"
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-            >
+            <Form layout="vertical" name="login" onFinish={onFinish}>
               <Form.Item
                 label="Username"
                 name="username"

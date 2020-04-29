@@ -15,6 +15,7 @@ import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import Home from "./components/GuestArea/Home";
 import Product from "./components/GuestArea/Product";
+import About from "./components/GuestArea/About";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/" component={Home} />
             <Route exact path="/product" component={Product} />
+            <Route exact path="/about" component={About} />
             <Route component={Routes} />
           </Switch>
         </Fragment>
