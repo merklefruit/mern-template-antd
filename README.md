@@ -10,12 +10,16 @@
 
 ## Features
 
-- [ ] Homepage / Landing Page
-- [ ] Authentication with JWT
-- [ ] Sleek and modern design with the Ant Design library
-- [ ] Protected Routes:
-  - [ ] Dashboard
+- [x] Landing Page
+- [x] Sleek and modern design with the Ant Design library
+- [x] Protected Routes:
+
+  - [x] Dashboard
   - [ ] Profile
+
+- [x] REST API Backend
+- [x] Authentication with JWT
+- [x] MongoDB Connection
 
 ## Usage
 

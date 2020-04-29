@@ -10,38 +10,25 @@ import { DashboardOutlined, ProfileOutlined } from "@ant-design/icons";
 import "../../static/css/main.css";
 import "../../static/css/layout.css";
 
-const { SubMenu } = Menu;
-
 const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <Menu className="menu" theme="dark" mode="horizontal">
-      <Menu.Item className="logo-item">{LOGO}</Menu.Item>
-      <SubMenu
-        title={
-          <>
-            <Link to="/dashboard" style={{ color: "white" }}>
-              <DashboardOutlined /> Dashboard
-            </Link>
-          </>
-        }
-      >
-        <Menu.Item>Item 1</Menu.Item>
-        <Menu.Item>Item 2</Menu.Item>
-        <Menu.Item>Item 3</Menu.Item>
-      </SubMenu>
-      <SubMenu
-        title={
-          <>
-            <Link to="/profile" style={{ color: "white" }}>
-              <ProfileOutlined /> Profile
-            </Link>
-          </>
-        }
-      >
-        <Menu.Item>Item 1</Menu.Item>
-        <Menu.Item>Item 2</Menu.Item>
-        <Menu.Item>Item 3</Menu.Item>
-      </SubMenu>
+      <Menu.Item className="logo-item">
+        <Link to="/dashboard" style={{ color: "white" }}>
+          {LOGO}
+        </Link>
+      </Menu.Item>
+      <Menu.Item>
+        <Link to="/dashboard" style={{ color: "white" }}>
+          <DashboardOutlined /> Dashboard
+        </Link>
+      </Menu.Item>
+
+      <Menu.Item>
+        <Link to="/profile" style={{ color: "white" }}>
+          <ProfileOutlined /> Profile
+        </Link>
+      </Menu.Item>
       <div className="tail-menu">
         <span
           type="primary"
@@ -57,7 +44,7 @@ const CustomMenu = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <Menu className="menu" theme="dark" mode="horizontal">
       <Menu.Item className="logo-item" style={{ color: "white" }}>
-        {LOGO}
+        <Link to="/">{LOGO}</Link>
       </Menu.Item>
       <Menu.Item>
         <Link to="/" style={{ color: "white" }}>

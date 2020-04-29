@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "antd";
 import CustomAlert from "./CustomAlert";
 import CustomSider from "./CustomSider";
@@ -30,7 +31,7 @@ function PageLayout({ children }) {
                 collapsed ? MenuUnfoldOutlined : MenuFoldOutlined
               )}
             </div>
-            {LOGO}
+            <Link to="/">{LOGO}</Link>
           </div>
         </Header>
 

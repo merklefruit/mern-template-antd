@@ -1,17 +1,19 @@
 import React, { Fragment, useEffect } from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
-
 import store from "./helpers/store";
 import setAuthToken from "./helpers/setAuthToken";
 import { loadUser } from "./actions/auth";
 
-// AUTH ROUTES
-import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register";
+//  @ ROUTING:
+//  @ Routes that don't require the main page Layout are found here.
+//  @ All other routes are passed to the Routes component
+//  @ in ./components/Routing/Routes
 
-// MAIN ROUTES
-import Home from "./pages/Home";
+import Routes from "./components/Routing/Routes";
+import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
+import Home from "./components/Home/index";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -26,10 +28,11 @@ function App() {
     <Provider store={store}>
       <Router>
         <Fragment>
-          <Route exact path="/" component={Home} />
           <Switch>
-            <Route exact path="/register" component={Register} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route component={Routes} />
           </Switch>
         </Fragment>
       </Router>
