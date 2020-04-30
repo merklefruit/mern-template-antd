@@ -59,7 +59,7 @@ npm run dev
 
 ## Credits
 
-_This template exists only thanks to the frameworks and library that I used to build it. I've just put the pieces together to make it easier to start a web app with this stack._
+_This template exists only thanks to the frameworks and library that I used to build it. I've just put the pieces together to make it easier to start a web app with this stack :)_
 
 ## License
 
