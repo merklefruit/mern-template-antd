@@ -1,9 +1,9 @@
 # MERN + Ant Design custom template
 
-![](https://img.shields.io/badge/Stack-MERN-informational)
+![mern](https://img.shields.io/badge/Stack-MERN-informational)
 
-<img src="./design/mern.jpeg"></img>
-<img src="./design/antdesign.png"></img>
+<img src="./design/mern.jpeg" width="400px"></img>
+<img src="./design/antdesign.png" width="400px"></img>
 
 **I haven't found any good full-stack web app starter boilerplates using [Ant Design](https://ant.design), so I decided to make my own.**
 
